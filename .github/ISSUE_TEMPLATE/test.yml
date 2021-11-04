@@ -3,7 +3,7 @@ description: 不具合や改善をレポート
 labels: ["triage"]
 body:
   - type: checkboxes
-    id: issue-type
+    id: issuetype
     attributes:
       label: レポートの種類を選択してください
       multiple: true
