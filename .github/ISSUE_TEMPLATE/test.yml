@@ -1,6 +1,6 @@
 name: レポートフォーム
 description: 不具合や改善をレポート
-labels: ["triage"]
+labels: triage
 body:
   - type: checkboxes
     id: issuetype
