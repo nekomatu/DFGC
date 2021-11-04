@@ -1,62 +1,42 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
-assignees:
-  - octocat
+name: レポートフォーム
+description: 不具合や改善をレポート
+labels: ["triage"]
 body:
-  - type: markdown
+  - type: checkboxes
+    id: issue-type
     attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: さらに情報が必要な場合、どのように連絡すればよいでしょうか？
-      placeholder: ex. email@example.com
-    validations:
-      required: false
+      label: レポートの種類を選択してください
+      multiple: true
+      options:
+        - A,動作の問題
+        - B,UIの問題
+        - C,設計の問題
+        - D,その他
   - type: textarea
     id: what-happened
     attributes:
-      label: What happened?
-      description: また、生じると期待されていたことは何でしょうか？
-      placeholder: Tell us what you see!
-      value: "バグが生じました!"
+      label: 見つかった現象・動作
+      description: 再現手順があればそれも記載お願いします
     validations:
       required: true
-  - type: dropdown
-    id: version
+  - type: input
+    id: txn
     attributes:
-      label: Version
-      description: 実行していたソフトウェアのバージョンは?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-    validations:
-      required: true
+      label: 事象が発生したTxn Hash
+      description: 原因調査のため出来るだけ記入してください。
+      placeholder: 0x....
   - type: dropdown
     id: browsers
     attributes:
-      label: What browsers are you seeing the problem on?
+      label: Webブラウザ
       multiple: true
       options:
         - Firefox
         - Chrome
         - Safari
         - Microsoft Edge
-  - type: textarea
-    id: logs
+   - type: input
+    id: web3client
     attributes:
-      label: Relevant log output
-      description: 関連するログの出力をコピーしてペーストしてください。 これは自動的にコードにフォーマットされるので、バックティックは不要です。
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: このIssueをサブミットすることで、あなたは私たちの [行動規範](https://example.com)に同意したことになります。
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      label: Web3インタフェース
+      placeholder: MetaMask
