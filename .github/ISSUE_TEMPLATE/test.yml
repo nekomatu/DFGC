@@ -2,15 +2,15 @@ name: レポートフォーム
 description: 不具合や改善をレポート
 labels: ["triage"]
 body:
-  - type: checkboxes
-    id: issuetype
-    attributes:
-      label: レポートの種類を選択してください
-      options:
-        - label: A,動作の問題
-        - label: B,UIの問題
-        - label: C,設計の問題
-        - label: D,その他
+- type: checkboxes
+  id: issuetype
+  attributes:
+    label: レポートの種類を選択してください
+    options:
+      - label: A,動作の問題
+      - label: B,UIの問題
+      - label: C,設計の問題
+      - label: D,その他
   - type: textarea
     id: what-happened
     attributes:
