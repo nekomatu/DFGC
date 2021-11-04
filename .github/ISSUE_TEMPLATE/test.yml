@@ -8,10 +8,10 @@ body:
       label: レポートの種類を選択してください
       multiple: true
       options:
-        - A,動作の問題
-        - B,UIの問題
-        - C,設計の問題
-        - D,その他
+        - label: A,動作の問題
+        - label: B,UIの問題
+        - label: C,設計の問題
+        - label: D,その他
   - type: textarea
     id: what-happened
     attributes:
