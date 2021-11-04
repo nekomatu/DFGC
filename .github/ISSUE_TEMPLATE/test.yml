@@ -6,7 +6,6 @@ body:
     id: issuetype
     attributes:
       label: レポートの種類を選択してください
-      multiple: true
       options:
         - label: A,動作の問題
         - label: B,UIの問題
